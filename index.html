@@ -937,7 +937,7 @@
   }
 
   /* active nav link tracking */
-  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.meta-col nav a'));
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.meta-col nav a[href^="#"]'));
   var navTargets = navLinks.map(function(a){ return document.querySelector(a.getAttribute('href')); }).filter(Boolean);
   if ('IntersectionObserver' in window && navTargets.length) {
     var navIo = new IntersectionObserver(function(entries){
