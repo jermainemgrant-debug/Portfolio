@@ -568,6 +568,7 @@
           <a href="#builds">Selected builds</a>
           <a href="#experience">Experience</a>
           <a href="#contact">Contact</a>
+          <a href="free-checklist/">Free checklist</a>
         </nav>
       </div>
       <div class="meta-col">
@@ -817,11 +818,12 @@
 
   <footer id="contact">
     <p class="footer-cta">Have a process costing you time or leads every week? <span>Let's fix it.</span></p>
+    <p style="width:100%;margin:-4px 0 4px"><a href="https://calendar.app.google/ZnDpUcTS3TXqDv4d9" target="_blank" rel="noopener">Book a free 10-minute bottleneck review &rarr;</a> &nbsp;&middot;&nbsp; <a href="free-checklist/">Get the free SME Bottleneck Checklist</a></p>
     <div class="links">
       <a href="mailto:jermainemgrant@gmail.com">jermainemgrant@gmail.com</a>
       <a href="tel:+18762372310">1876&#8209;237&#8209;2310</a>
       <a href="https://wa.me/18762372310" target="_blank" rel="noopener">WhatsApp</a>
-      <a href="https://linkedin.com/in/jermaine-grant-67147831" target="_blank" rel="noopener">linkedin.com/in/jermaine&#8209;grant&#8209;67147831</a>
+      <a href="https://www.linkedin.com/in/jermaine-m-grant/" target="_blank" rel="noopener">linkedin.com/in/jermaine&#8209;m&#8209;grant</a>
     </div>
     <div class="status">STATUS <b>OPEN FOR PROJECTS</b><br>Everyday solutions to everyday problems</div>
     <div class="copyright">
@@ -935,7 +937,7 @@
   }
 
   /* active nav link tracking */
-  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.meta-col nav a'));
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.meta-col nav a[href^="#"]'));
   var navTargets = navLinks.map(function(a){ return document.querySelector(a.getAttribute('href')); }).filter(Boolean);
   if ('IntersectionObserver' in window && navTargets.length) {
     var navIo = new IntersectionObserver(function(entries){
